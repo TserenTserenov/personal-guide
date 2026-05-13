@@ -116,15 +116,6 @@ open "${SETUP_URL}"  # macOS
 - **БД:** `github_connections.app_installation_id` (миграция 014)
 - **Webhook:** `/webhook/github/workbook` — приём push events от установленного App, маршрутизация по installation_id
 
-## Архитектурное замечание (для понимания)
-
-Этот скилл — **MVP-canal B** из SC.020. По исходному дизайну канал B должен принимать identity напрямую через Ory SSO (без необходимости знать telegram_user_id). Сейчас это упрощено — identity берётся через Telegram-mapping, потому что:
-
-- Aisystant MCP не отдаёт `ory_user_id` напрямую в скиллы (требует расширения MCP gateway)
-- Setup endpoint не имеет Ory-OAuth flow (вся OAuth-логика в боте, не вынесена)
-
-Полное решение — **WP-303 (вынос OAuth Gateway)** + расширение setup endpoint для Ory-direct-flow. Текущий скилл работает для пилотов с Telegram identity (большинство case'ов для пилотного запуска).
-
 ## Антипаттерны
 
 - ❌ Не запускать `/connect-guide` без telegram_user_id — Setup endpoint вернёт 400
