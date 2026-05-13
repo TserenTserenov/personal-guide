@@ -16,7 +16,7 @@ related: [WP-245, WP-222, WP-149, PD.FORM.089, PD.CAT.003, personal-guide-start]
 ## Контракт скилла
 
 - **Вход:** существующий GitHub-репо `personal-guide` под аккаунтом пилота (создаётся через `/personal-guide-start` или вручную; имя константно для всех пилотов — у каждого один личный аккаунт = один репо). Активная подписка «Бесконечное развитие» (DP.SC.112). Доступ к `dt_read_digital_twin`, `personal_write`.
-- **Выход:** 6 файлов (`README.md`, `profile.md`, `worldview.md`, `methods.md`, `weekly/<YYYY-Www>.md`, `daily/<YYYY-MM-DD>.md`) перезаписаны актуальной версией под текущий RCS+домен. Прежние weekly/daily при пересборке — в `history/` (не удаляются).
+- **Выход:** 6 файлов (`README.md`, `profile.md`, `worldview.md`, `methods.md`, `weekly/<YYYY-Www>.md`, `daily/<YYYY-MM-DD>.md`) перезаписаны актуальной версией под текущий RCS+домен. Прежние weekly/daily при пересборке — в `history/` (не удаляются). При первом запуске (`first-run`) дополнительно — раздача 5 скиллов в `.claude/skills/` пилотского репо (см. Шаг 6.7), чтобы они работали в любом канале Claude Code включая `claude.ai/code`.
 - **Время:** ≤5 мин на пересборку (без диалога), ≤15 мин с диалогом сбора недостающего профиля.
 - **Не делает:** не создаёт репо (это `/personal-guide-start`); не считает баллы (WP-109/WP-121); не запускает по расписанию (Портной, WP-222).
 
@@ -89,58 +89,23 @@ stage_raw = min(W.baseline, M1.baseline, M2.baseline, M4.baseline)
 
 Через `personal_write(source: "personal-guide", path: ..., content: ...)` — имя источника константа для всех пилотов.
 
-### 6.1. `README.md`
+### 6.1–6.6. Основные файлы
 
-```markdown
-# Персональное руководство: {ФИО или GitHub-login}
+README.md, profile.md, worldview.md, methods.md, weekly/YYYY-Www.md, daily/YYYY-MM-DD.md — по блокам из ступенной заготовки + доменной вставки.
 
-> Собрано/обновлено скиллом /personal-guide-render {YYYY-MM-DD}.
-> Ступень: {ступень} (PD.FORM.003). Домен: {домен}.
+### 6.7. Раздача скиллов в `.claude/skills/` пилотского репо
 
-## Структура
+**Зачем:** скиллы живут в `~/IWE/.claude/skills/` платформы. При работе пилота в **claude.ai/code** user-global `~/.claude/skills/` не пробрасывается. Скиллы в репо → работают в любом канале.
 
-- `profile.md` — RCS-профиль и ритм
-- `worldview.md` — мировоззренческая фаза и мемы
-- `methods.md` — методы под bottleneck
-- `weekly/` — гипотезы недель
-- `daily/` — тактика дней
-- `history/` — архив прошлых weekly/daily
+При `first-run` — записать все пять скиллов:
+- `lesson/SKILL.md`, `lesson-close/SKILL.md`, `connect-guide/SKILL.md`
+- `personal-guide-render/SKILL.md`, `personal-guide-start/SKILL.md`
 
-## Как обновлять
+### 6.8. Reflection-template в `history/` (при first-run)
 
-Это живой репо. Чтобы пересобрать — вызови `/personal-guide-render` снова (после изменений в Память.Derived) или попроси в чате:
-- «Собери план на завтра» → новый `daily/<дата>.md`
-- «Переделай methods.md под проект X» → пересборка методов
-- «Итоги недели» → архив `weekly/<неделя>.md` в `history/` + новая гипотеза
+Скопировать `~/IWE/.claude/skills/personal-guide-render/templates/reflection-template.md` → `history/reflection-template.md`.
 
-Автоматизация по расписанию — Портной (WP-222) летом.
-
-## Источники
-
-- Заготовка ступени: `PACK-personal/.../personal-guide-seeds/stage-{N}-{name}.md`
-- Доменная вставка: `PACK-personal/.../personal-guide-seeds/domain-{kw|generic}.md`
-- RCS-модель: `PACK-personal/.../formalizations/PD.FORM.089-learner-rcs.md`
-```
-
-### 6.2. `profile.md`
-
-Из «Блок → profile.md» ступенной заготовки + раздела «Как подставляется в профиль» доменной вставки. Все плейсхолдеры — из Шага 1.
-
-### 6.3. `worldview.md`
-
-Из «Блок → worldview.md» ступенной заготовки. Подставь `{phase}`. В конце +1 строка: «Мемы в работе на этой неделе: [dissatisfactions]».
-
-### 6.4. `methods.md`
-
-Из «Блок → methods.md» ступенной заготовки для конкретного bottleneck (выбери ветку). + таблица «Типы работ, в которые встраиваются методы» из доменной вставки.
-
-### 6.5. `weekly/<YYYY-Www>.md`
-
-Текущая ISO-неделя. Из «Блок → weekly/…» ступенной заготовки. Реальная дата начала недели.
-
-### 6.6. `daily/<YYYY-MM-DD>.md`
-
-Сегодняшняя дата. Из «Блок → daily/…» ступенной заготовки.
+Сказать пилоту: «Чтобы записать рефлексию: скопируй `history/reflection-template.md` → `history/<дата>-reflection.md`, заполни, закоммить».
 
 ## Шаг 7. Подтверждение пилоту
 
@@ -151,7 +116,7 @@ Bottleneck: {bottleneck}.
 Домен: {домен}.
 
 Открой: code https://github.com/{login}/personal-guide
-Изменилось: {список переписанных файлов; если первый запуск — все 6}.
+Изменилось: {список переписанных файлов}.
 ```
 
 ## Failure modes
@@ -161,15 +126,4 @@ Bottleneck: {bottleneck}.
 | 401 от Gateway | нет подписки или истёк JWT | Обновить Ory-сессию, повторить |
 | Память.Derived пустая | RCS ещё не инициализирован | Диалог 5 вопросов → консервативный профиль |
 | `personal_write` 404 на репо | репо не создан | Вызвать `/personal-guide-start` сначала |
-| `personal_write` не сработал для weekly/ | подпапка не существует | Gateway создаёт автоматически. Если упало — уточнить путь |
 | Пилот ст. 1 или 5 | см. Шаг 2a/2b | Минимальный fallback |
-
-## Что скилл НЕ делает (граница)
-
-- Не создаёт репо — это `/personal-guide-start` (`create_repository`).
-- Не генерирует следующий `daily`/`weekly` автоматически — пилот просит в чате.
-- Не считает баллы — WP-109/WP-121.
-- Не обновляет Память.Derived по итогам недели — Портной + WP-203.
-- Не читает коммиты/метрики — WP-203 Оркестратор.
-
-Когда Портной (WP-222) выйдет — этот скилл уйдёт в архив.
