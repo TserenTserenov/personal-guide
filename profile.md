@@ -3,7 +3,6 @@ id: PD.WP.019.TserenTserenov.profile
 type: personal-guide
 stage: "5 (Проактивный)"
 qualification: "Реформатор"
-primary_program: "research"
 current_request: |
   Рабочее наставничество — методы передачи системного мышления.
   Фокус: разработка семинаров (WP-351) + системная доставка руководства (WP-149).
