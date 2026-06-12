@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-12T03:00:38Z",
+  "sections": {
+    "readme": "README.md",
+    "profile": "profile.md",
+    "worldview": "worldview.md",
+    "methods": "methods.md"
+  },
+  "week": {
+    "iso_week": "2026-W24",
+    "start_date": "2026-06-08",
+    "end_date": "2026-06-14",
+    "title": ""
+  },
+  "days": [
+    {
+      "date": "2026-06-08",
+      "file": "lesson/2026-06-08.md",
+      "title": "День 2026-06-08 (восстановление)"
+    },
+    {
+      "date": "2026-06-09",
+      "file": "lesson/2026-06-09.md",
+      "title": "Дневной план · 2026-06-09"
+    },
+    {
+      "date": "2026-06-10",
+      "file": "lesson/2026-06-10.md",
+      "title": ""
+    },
+    {
+      "date": "2026-06-11",
+      "file": "lesson/2026-06-11.md",
+      "title": ""
+    },
+    {
+      "date": "2026-06-12",
+      "file": "lesson/2026-06-12.md",
+      "title": ""
+    }
+  ]
+}
