@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-13T03:00:48Z",
+  "generated_at": "2026-06-14T03:00:50Z",
   "sections": {
     "readme": "README.md",
     "profile": "profile.md",
@@ -42,6 +42,11 @@
     {
       "date": "2026-06-13",
       "file": "lesson/2026-06-13.md",
+      "title": ""
+    },
+    {
+      "date": "2026-06-14",
+      "file": "lesson/2026-06-14.md",
       "title": ""
     }
   ]
