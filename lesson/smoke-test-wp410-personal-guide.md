@@ -1,0 +1,1 @@
+smoke continuation path OK
