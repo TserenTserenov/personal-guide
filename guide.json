@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-15T02:01:58Z",
+  "generated_at": "2026-06-16T03:00:30Z",
   "sections": {
     "readme": "README.md",
     "profile": "profile.md",
@@ -11,7 +11,7 @@
     "iso_week": "2026-W25",
     "start_date": "2026-06-15",
     "end_date": "2026-06-21",
-    "title": "Руководство недели: восстановление ритма"
+    "title": ""
   },
   "days": [
     {
@@ -53,6 +53,11 @@
       "date": "2026-06-15",
       "file": "lesson/2026-06-15.md",
       "title": "День: 2026-06-15 (понедельник, начало восстановления)"
+    },
+    {
+      "date": "2026-06-16",
+      "file": "lesson/2026-06-16.md",
+      "title": ""
     }
   ]
 }
