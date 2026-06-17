@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-16T15:07:06Z",
+  "generated_at": "2026-06-17T03:00:47Z",
   "sections": {
     "readme": "README.md",
     "profile": "profile.md",
@@ -58,6 +58,11 @@
       "date": "2026-06-16",
       "file": "lesson/2026-06-16.md",
       "title": ""
+    },
+    {
+      "date": "2026-06-17",
+      "file": "lesson/2026-06-17.md",
+      "title": "День восстановления · 17 июня 2026"
     }
   ]
 }
