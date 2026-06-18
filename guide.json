@@ -1,11 +1,8 @@
 {
-  "schema_version": 1,
-  "generated_at": "2026-06-18T03:00:35Z",
+  "schema_version": 2,
+  "generated_at": "2026-06-18T13:33:00Z",
   "sections": {
-    "readme": "README.md",
-    "profile": "profile.md",
-    "worldview": "worldview.md",
-    "methods": "methods.md"
+    "weekly": "lesson/2026-W25.md"
   },
   "week": {
     "iso_week": "2026-W25",
@@ -69,5 +66,6 @@
       "file": "lesson/2026-06-18.md",
       "title": "Сегодня, 2026-06-18"
     }
-  ]
+  ],
+  "last_stage": 5
 }
