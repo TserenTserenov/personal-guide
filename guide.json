@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-06-18T13:33:00Z",
+  "generated_at": "2026-06-18T13:38:03Z",
   "sections": {
     "weekly": "lesson/2026-W25.md"
   },
@@ -11,41 +11,6 @@
     "title": ""
   },
   "days": [
-    {
-      "date": "2026-06-08",
-      "file": "lesson/2026-06-08.md",
-      "title": "День 2026-06-08 (восстановление)"
-    },
-    {
-      "date": "2026-06-09",
-      "file": "lesson/2026-06-09.md",
-      "title": "Дневной план · 2026-06-09"
-    },
-    {
-      "date": "2026-06-10",
-      "file": "lesson/2026-06-10.md",
-      "title": ""
-    },
-    {
-      "date": "2026-06-11",
-      "file": "lesson/2026-06-11.md",
-      "title": ""
-    },
-    {
-      "date": "2026-06-12",
-      "file": "lesson/2026-06-12.md",
-      "title": ""
-    },
-    {
-      "date": "2026-06-13",
-      "file": "lesson/2026-06-13.md",
-      "title": ""
-    },
-    {
-      "date": "2026-06-14",
-      "file": "lesson/2026-06-14.md",
-      "title": ""
-    },
     {
       "date": "2026-06-15",
       "file": "lesson/2026-06-15.md",
