@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-06-20T03:00:43Z",
+  "generated_at": "2026-06-21T03:00:45Z",
   "sections": {
     "weekly": "lesson/2026-W25.md"
   },
@@ -40,6 +40,11 @@
       "date": "2026-06-20",
       "file": "lesson/2026-06-20.md",
       "title": "Сегодня, 2026-06-20"
+    },
+    {
+      "date": "2026-06-21",
+      "file": "lesson/2026-06-21.md",
+      "title": "Сегодня, 2026-06-21"
     }
   ],
   "last_stage": 5
