@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-06-22T02:02:01Z",
+  "generated_at": "2026-06-23T03:04:37Z",
   "sections": {
     "weekly": "lesson/2026-W26.md"
   },
@@ -8,9 +8,14 @@
     "iso_week": "2026-W26",
     "start_date": "2026-06-22",
     "end_date": "2026-06-28",
-    "title": "Твоя неделя: 2026-W26"
+    "title": ""
   },
   "days": [
+    {
+      "date": "2026-06-23",
+      "file": "lesson/2026-06-23.md",
+      "title": "Руководство на 2026-06-23"
+    },
     {
       "date": "2026-W26",
       "file": "lesson/2026-W26.md",
