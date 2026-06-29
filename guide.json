@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-06-29T02:02:13Z",
+  "generated_at": "2026-06-29T12:56:05Z",
   "sections": {
     "weekly": "guide/2026-W27.md"
   },
@@ -8,9 +8,14 @@
     "iso_week": "2026-W27",
     "start_date": "2026-06-29",
     "end_date": "2026-07-05",
-    "title": "Твоя неделя: 2026-W27"
+    "title": ""
   },
   "days": [
+    {
+      "date": "2026-06-29",
+      "file": "guide/2026-06-29.md",
+      "title": "Руководство на 2026-06-29"
+    },
     {
       "date": "2026-W27",
       "file": "guide/2026-W27.md",
